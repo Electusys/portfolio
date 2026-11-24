@@ -29,7 +29,6 @@
   --radius-full: 9999px;
 
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 35px rgba(56, 189, 248, 0.18);
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -50,60 +49,12 @@ html {
 body {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-main);
-  background-image: 
-    radial-gradient(ellipse 80% 55% at 50% -15%, rgba(37, 99, 235, 0.2), transparent 70%),
-    radial-gradient(ellipse 65% 45% at 85% 55%, rgba(30, 58, 138, 0.18), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 15% 85%, rgba(14, 116, 144, 0.12), transparent 70%);
-  background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.65;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Arka Plan Ambient Işıkları (Canlı Midnight Blue Efekti) */
-.ambient-glow {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.45;
-  animation: pulseAmbient 12s ease-in-out infinite alternate;
-}
-
-.glow-1 {
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.38), rgba(30, 58, 138, 0.18) 50%, transparent 70%);
-  top: -120px;
-  right: -60px;
-}
-
-.glow-2 {
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, rgba(67, 56, 202, 0.32), rgba(30, 27, 75, 0.15) 60%, transparent 70%);
-  top: 35%;
-  left: -160px;
-  animation-delay: -4s;
-}
-
-.glow-3 {
-  width: 480px;
-  height: 480px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.22), transparent 70%);
-  bottom: 50px;
-  right: 5%;
-  animation-delay: -8s;
-}
-
-@keyframes pulseAmbient {
-  0% { transform: scale(0.9) translate(0, 0); opacity: 0.35; }
-  50% { transform: scale(1.1) translate(20px, 30px); opacity: 0.5; }
-  100% { transform: scale(1) translate(-20px, 15px); opacity: 0.38; }
 }
 
 /* Kapsayıcı */
@@ -171,7 +122,6 @@ body {
   color: var(--accent-cyan);
   font-weight: 800;
   font-size: 0.95rem;
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
 }
 
 .nav-links {
@@ -347,7 +297,6 @@ body {
   font-size: 0.82rem;
   font-weight: 600;
   margin-bottom: 24px;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
 }
 
 .status-dot {
@@ -440,19 +389,13 @@ body {
 
 .photo-backdrop {
   position: absolute;
-  width: 320px;
-  height: 380px;
-  border-radius: 120px 120px 140px 140px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, rgba(99, 102, 241, 0.2) 100%);
-  filter: blur(20px);
+  width: 294px;
+  height: 364px;
+  border-radius: 110px 110px 130px 130px;
+  border: 1px dashed rgba(56, 189, 248, 0.25);
+  background: rgba(255, 255, 255, 0.02);
   z-index: 0;
   transform: rotate(-3deg);
-  animation: floatBackdrop 6s ease-in-out infinite alternate;
-}
-
-@keyframes floatBackdrop {
-  0% { transform: rotate(-3deg) translateY(0); }
-  100% { transform: rotate(2deg) translateY(-10px); }
 }
 
 .photo-dots {
@@ -474,7 +417,7 @@ body {
   border-radius: 110px 110px 130px 130px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
   background: #0a1329;
   transition: transform var(--transition-smooth);
 }
@@ -656,7 +599,7 @@ body {
   transform: translateY(-5px);
   background: var(--bg-card-hover);
   border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
 .expertise-card:hover::before {
@@ -769,7 +712,7 @@ body {
   color: var(--accent-cyan);
   background: rgba(56, 189, 248, 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
@@ -799,7 +742,7 @@ body {
   transform: translateY(-7px);
   background: var(--bg-card-hover);
   border-color: rgba(56, 189, 248, 0.35);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
 .project-card-header {
@@ -911,21 +854,9 @@ body {
   border-radius: var(--radius-lg);
   padding: 55px 40px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(56, 189, 248, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
-}
-
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 350px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent 70%);
-  pointer-events: none;
 }
 
 .contact-content {

@@ -16,7 +16,7 @@ Bu depo, **GitHub Pages** üzerinde barındırılan kişisel geliştirici portfo
 
 * **[EcoPulse](https://github.com/Electusys/EcoPulse):** Çevresel verileri ve enerji verimliliğini izleyen akıllı telemetri ve analiz sistemi.
 * **[Apartman Yönetim Sistemi](https://github.com/Electusys/apartman-yonetim-paneli):** Sakin, daire ve aidat takibi sunan, Ubuntu Linux üzerinde barındırılan yönetim paneli.
-* **[Personal Finance Tracker](https://github.com/Electusys/Personal-Finance-Tracker):** Harcama ve gelir analizleri sunan komut satırı finans aracı.
+* **[Personal Finance Tracker](https://github.com/Electusys/Personal-Finance-Tracker):** Streamlit masaüstü/web arayüzü, Pandas veri analitiği ve Google Gemini AI entegrasyonu sunan kişisel finans takip uygulaması.
 * **[Python To-Do List](https://github.com/Electusys/python-todo-list):** Komut satırı üzerinden görev ve yapılacaklar listesi yönetimini sağlayan Python aracı.
 
 ---
